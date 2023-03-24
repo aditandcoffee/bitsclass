@@ -1,0 +1,24 @@
+body {
+    font-family: sans-serif;
+}
+
+.mydiv {
+    display: flex;
+}
+.div1, .div2, .div3 {
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1;
+    padding-bottom: 80px;
+
+}
+.services {
+    background-color: rgb(199, 199, 199);
+    padding: 50px 150px;
+
+}
+.services h1 {
+    text-align: center;
+}

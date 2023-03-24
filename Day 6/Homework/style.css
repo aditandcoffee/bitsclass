@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:url(https://upload.wikimedia.org/wikipedia/commons/f/f8/Narayani_Bridge.jpg);
+    background-size: cover;
+    margin: 0;
+
+}
+
+.container {
+    display: flex;
+    margin: 100px 250px;
+    justify-content: center;
+}
+.div1, .div2, .div3 {
+    margin: 100px 50px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    color: rgb(140, 140, 140);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.432);
+    border-radius: 5px 5px 5px 5px;
+    
+}
+.topdiv1, .topdiv2, .topdiv3 {
+    background-color: rgb(60, 15, 206);
+    padding: 10px;
+    color: white;
+    margin-bottom: 40px;
+    border-radius: 5px 5px 0px 0px;
+}
+.boldprice {
+    font-weight: 700;
+    font-size: 40px;
+}
+.btn {
+    background-color: blue;
+    color: white;
+    font-weight: 700;
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: none;
+    margin: 20px 50px 40px 50px;
+    cursor: pointer;
+    border: 1px solid white;
+    transition: all 100ms ease;
+
+}
+.btn:hover {
+    background-color: white;
+    border: 1px solid blue;
+    color: blue;
+}
+.btn:active {
+    transform: scale(0.9);
+}
+.topdiv3 {
+    background-color: rgb(255, 70, 101);
+}
+.div3 .btn {
+    background-color: rgb(255, 70, 101);
+    border: 1px solid white;
+}
+
+.div3 .btn:hover {
+    color: rgb(255, 70, 101);
+    background-color: white;
+    border: 1px  solid rgb(255, 70, 101);
+}

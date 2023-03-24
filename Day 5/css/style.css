@@ -1,0 +1,74 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(240, 240, 240);
+}
+h1 {
+    margin-top: 30px;
+}
+.container {
+    overflow: hidden;
+    padding: 20px 100px;
+}
+.outerdiv {
+    float: left;
+    width: 25%;
+}
+.innerdiv {
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(132, 132, 132, 0.422);
+}
+.bg-blue {
+    background-color: blue;
+    color: white;
+}
+.innerdiv span {
+    background-color: blue;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 30px;
+}
+.bg-blue span {
+    background-color: white;
+    padding: 5px 15px;
+    color: blue;
+    border-radius: 30px;
+}
+.btn {
+    background-color: white;
+    border: 1px solid blue;
+    padding: 10px 30px;
+    font-weight: 700;
+    border-radius: 20px;
+    color: blue;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.btn:hover {
+    background-color: blue;
+    border: 1px solid white;
+    padding: 10px 30px;
+    font-weight: 700;
+    border-radius: 20px;
+    color: white;
+}
+.bg-blue .btn {
+    background-color: blue;
+    border: 1px solid white;
+    padding: 10px 30px;
+    font-weight: 700;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+.bg-blue .btn:hover {
+    background-color: white;
+    border: 1px solid blue;
+    padding: 10px 30px;
+    font-weight: 700;
+    border-radius: 20px;
+    color: blue;
+}

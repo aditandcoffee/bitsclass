@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+}
+.container {
+    margin: 40px 10px;
+    background-color: aqua;
+}
+
+.innerdiv1, .innerdiv2, .innerdiv3 {
+    text-align: center;
+}
+
+.innerdiv1, .innerdiv2, .innerdiv3 {
+    background-color: rgb(221, 221, 221);
+    margin: 10px;
+    padding: 20px 20px;
+    box-shadow: 2px 2px 8px rgb(125, 125, 125);
+    border-radius: 10px;
+}
+
+.mydiv1, .mydiv2, .mydiv3 {
+    display: inline-block;
+    width: 33.33%;
+    float: left;
+    
+}
+
+.btndiv button {
+    color: white;
+    background-color: green;
+    padding: 10px 40px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.btndiv {
+    margin: 20px;
+}
+
+.btndiv button:hover {
+    background-color: white;
+    border: 1px solid green;
+    color:green; 
+    cursor: pointer; 
+}
