@@ -1,0 +1,86 @@
+body {
+    font-family: Roboto;
+
+}
+.container {
+    padding: 40px 100px;
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.textbox h2 {
+    color: blue;
+    font-weight: 400;
+    border-left: 5px solid orange;
+    padding: 5px;
+}
+
+.textbox h1 {
+    font-weight: 400;
+    font-size: 40px;
+}
+.textbox p {
+    text-align: justify;
+    margin-top: 40px;
+}
+.textbox .btn {
+    background-color: orange;
+    color: white;
+    border: 1px solid orange;
+    padding: 20px 40px;
+    cursor: pointer;
+    margin:40px 0px;
+    font-size: 15px;
+    transition: background-color  ease-in;
+}
+.textbox .btn:hover {
+    background-color: white;
+    color: orange;
+    border: 1px solid orange;
+    font-size: 15px;
+}
+.container2 {
+    text-align: center;
+}
+.boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.container2 .text p {
+    color: blue;
+}
+.container2 .text h1 {
+    font-size: 40px;
+    font-weight: 400;
+
+}
+.box {
+    padding: 20px;
+    margin: 20px;
+    background-color: aliceblue;
+    box-shadow: 2px 2px 5px rgb(209, 209, 209);
+    border-radius: 10px;
+    
+}
+.box p {
+    text-align: justify;
+}
+.box img {
+    width: 15%;
+    background-color: orange;
+    padding: 20px;
+    border-radius: 50%;
+    
+}
+
+@media (max-width:768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .container2 {
+        grid-template-columns: 1fr;
+    }
+
+}

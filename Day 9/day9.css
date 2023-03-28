@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+justify-content: center;
+    
+}
+
+
+.divtab {
+    display: none;
+
+}
+.divmobile {
+    display: none;
+
+}
+.divpc {
+    display: block;
+
+
+
+}
+
+@media (max-width:992px) {
+    .divtab {
+        display: block;
+    }
+    .divmobile {
+        display: none;
+    }
+    .divpc {
+        display: none;
+    }
+}
+@media (max-width:512px) {
+    .divtab {
+        display: none;
+    }
+    .divmobile {
+        display: block;
+    }
+    .divpc {
+        display: none;
+    }
+
+}
