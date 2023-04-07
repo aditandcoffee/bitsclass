@@ -111,12 +111,13 @@ text-align: center;
     margin-top: 10px;
     text-align: left;
 }
-.input-group input {
+.input-group input, .input-group textarea {
     padding: 10px;
     display: block;
     width: 95%;
     border-radius: 10px;
     border: none;
+    max-width: 95%;
 }
 .submit {
     margin-top: 10px;
@@ -128,7 +129,27 @@ background-color: rgb(76, 0, 255);
 padding: 10px 30px;
 color: white;
 border-radius: 20px;
+cursor: pointer;
 }
-.input-group input:focus {
+.input-group input:focus, .input-group textarea:focus {
     outline: none;
+}
+.submit input:hover {
+    background-color:rgb(60, 0, 199); ;
+}
+.contact-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px 150px;
+}
+.input-group textarea {
+    max-height: 80px;
+}
+.contact-form {
+    width: 500px;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
 }
