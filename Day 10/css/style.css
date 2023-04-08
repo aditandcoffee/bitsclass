@@ -2,9 +2,25 @@ body{
     font-family: sans-serif;
     margin: 0;
 }
+.topbar {
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
 
 .navbar{
     background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar img {
+    width: 150px;
+    padding: 10px;
+    filter: drop-shadow(5px 2px 8px white);
 }
 
 .menu{
@@ -101,11 +117,12 @@ body{
 
 .login-form {
 width: 500px;
-background-color: aqua;
+background-color: rgb(240, 240, 240);
 margin: 20px auto auto auto;
-padding: 10px;
+padding: 50px 20px;
 border-radius: 10px;
 text-align: center;
+box-shadow: 2px 2px 8px rgb(216, 216, 216);
 }
 .input-group {
     margin-top: 10px;
@@ -148,7 +165,7 @@ cursor: pointer;
 }
 .contact-form {
     width: 500px;
-    background-color: aqua;
+    background-color: rgb(225, 225, 225);
     padding: 10px;
     border-radius: 10px;
     text-align: center;
