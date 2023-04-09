@@ -1,0 +1,263 @@
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.topbar {
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    margin: 0;
+
+}
+.topbar i {
+    color: white;
+}
+
+
+.navbar{
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    box-shadow: 2px 2px 8px rgb(151, 151, 151);
+    margin: -1px;
+}
+.navbar img {
+    width: 100px;
+    padding: 10px;
+    filter: drop-shadow(5px 2px 8px white);
+}
+
+.menu{
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+    text-align: right;
+}
+
+.menu li{
+    display: inline;
+    margin: 10px;
+    position: relative;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+.dropdown {
+    position: absolute;
+    background-color: rgb(116, 116, 116);
+    top: 30px;
+    right: 0px;
+    padding: 0;
+    width: 100px;
+    display: none;
+}
+.menu li:hover .dropdown {
+    display: block;
+}
+.dropdown li {
+    display: block;
+    margin: 0;
+    padding:10px 0px
+
+}
+
+.active{
+    background-color: red;
+    border-radius: 10px;
+}
+
+#about{
+    padding: 25px 100px;
+}
+
+.section-heading{
+    background-color: rgb(157, 148, 148);
+    color: white;
+    padding: 30px 10px;
+}
+
+.about-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.about-content img{
+    width: 100%;
+}
+
+.about-text h3{
+    color: blue;
+}
+
+.about-text p{
+    text-align: justify;
+    color: rgb(52, 49, 49);
+}
+
+.footer{
+    background-color: rgb(50, 50, 151);
+    color: white;
+    padding: 20px 50px 0px 50px;
+}
+
+.upper-footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.upper-footer img{
+    width: 100px;
+}
+
+.quick-links{
+    padding-left: 50px;
+}
+
+.quick-links ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.quick-links li{
+    margin-top: 10px;
+}
+
+.quick-links a{
+    color: white;
+    text-decoration: none;
+}
+
+.lower-footer{
+    padding: 20px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-form {
+width: 500px;
+background-color: rgb(240, 240, 240);
+margin: 20px auto auto auto;
+padding: 50px 20px;
+border-radius: 10px;
+text-align: center;
+box-shadow: 2px 2px 8px rgb(216, 216, 216);
+}
+.input-group {
+    margin-top: 10px;
+    text-align: left;
+}
+.input-group input, .input-group textarea {
+    padding: 10px;
+    display: block;
+    width: 95%;
+    border-radius: 10px;
+    border: none;
+    max-width: 95%;
+}
+.submit {
+    margin-top: 10px;
+    
+}
+.submit input {
+border: none;
+background-color: rgb(76, 0, 255);
+padding: 10px 30px;
+color: white;
+border-radius: 20px;
+cursor: pointer;
+}
+.input-group input:focus, .input-group textarea:focus {
+    outline: none;
+}
+.submit input:hover {
+    background-color:rgb(60, 0, 199); ;
+}
+.contact-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px 150px;
+}
+.input-group textarea {
+    max-height: 80px;
+}
+.contact-form {
+    width: 500px;
+    background-color: rgb(225, 225, 225);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.product-section {
+    padding: 50px;
+}
+.product-section h2 {
+    text-align: center;
+    padding: 50px;
+}
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 10px 50px;
+}
+.product img {
+    width: 100%;
+    transition: 0.4s;
+}
+.product {
+    background-color: aliceblue;
+    padding: 10px;
+    position: relative;
+    
+}
+.product:hover img {
+    transform: scale(1.02);
+}
+.product:hover {
+    box-shadow: 2px 2px 8px rgb(238, 238, 238);
+}
+
+.old-price {
+    text-decoration: line-through;
+}
+.new-price {
+    font-weight: bold;
+    font-size: larger;
+}
+.discount {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background-color: blue;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: white;
+}
+.goto-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    z-index: 50;
+}
+.goto-top a {
+    color: white;
+}
