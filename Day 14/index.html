@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="myheading">This is function</h2>
+    <h2>Adit</h2>
+    <button onclick="myFunction()">Normal</button>
+    <button onclick="myFunctionAgain()">Erase</button>
+    <button onclick="myFunctionAg()">Invert</button>
+    <script>
+        function myFunction()
+        {
+            document.getElementById('myheading').innerHTML= "This is function";
+            document.getElementById('myheading').style.color="red";
+            document.getElementById('myheading').style.backgroundColor="yellow";
+            document.getElementById('myheading').style.display="block";
+
+        }
+
+        function myFunctionAgain()
+        {
+            document.getElementById('myheading').style.display="none";
+        }
+        
+        function myFunctionAg()
+        {
+            document.getElementById('myheading').style.color="yellow";
+            document.getElementById('myheading').style.backgroundColor="red";
+        }
+        // document.write('Hello world')
+        // document.write('<br>')
+        // document.write('Hello world again')
+        // var a = 2
+        // var b = 2.3
+        // var total = a + b;
+        // var text = " The sum of  " + a  + " and " + b  + " is " + total;
+        // document.getElementById('myheading').innerHTML = text;
+        
+    </script>
+</body>
+</html>

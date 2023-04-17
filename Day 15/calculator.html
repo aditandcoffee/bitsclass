@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    .container{
+            width: 130px;
+            background-color: aliceblue;
+            margin: auto;
+            padding: 40px;
+        
+        }
+        input {
+        margin-left: -15px;
+        }
+        
+
+        .numbers{
+            padding-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin: 10px;
+        }
+
+        #input1{
+            font-size: 5px;
+            margin: -10px;
+            display: block;
+        }
+</style>
+<body>
+    <div class="container">
+        <input type="text" id="display">
+        <br>
+        <div class="numbers">
+            <button onclick="myInput('7')">7</button>
+            <button onclick="myInput('8')">8</button>
+            <button onclick="myInput('9')">9</button>
+            <button onclick="myInput('4')">4</button>
+            <button onclick="myInput('5')">5</button>
+            <button onclick="myInput('6')">6</button>
+            <button onclick="myInput('1')">1</button>
+            <button onclick="myInput('2')">2</button>
+            <button onclick="myInput('3')">3</button>
+            <button onclick="myInput('0')">0</button>
+            <button onclick="addition()">+</button>
+            <button onclick="subtraction()">-</button>
+            <button onclick="multiply()">x</button>
+            <button onclick="divide()">/</button>
+            <button onclick="clearform()">C</button>
+            <button onclick="cancelone()">-x</button>
+            <button onclick="calculate()">=</button>
+
+        </div>
+    </div>
+    <script>
+        function myInput(x)
+        {
+            document.getElementById('display').value += x;
+        }
+        function addition()
+        {
+            input1 = parseInt(document.getElementById('display').value);
+            document.getElementById('display').value = "";
+            document.getElementById('input1').innerHTML = input1 + ' + ';
+        }
+        function subtraction()
+        {
+            input1 = parseInt(document.getElementById('display').value);
+            document.getElementById('display').value = "";
+            document.getElementById('input1').innerHTML = input1 - ' - ';
+        }
+        function multiply()
+        {
+            input1 = parseInt(document.getElementById('display').value);
+            document.getElementById('display').value = "";
+            document.getElementById('input1').innerHTML = input1 * ' * ';
+        }
+        function divide()
+        {
+            input1 = parseInt(document.getElementById('display').value);
+            document.getElementById('display').value = "";
+            document.getElementById('input1').innerHTML = input1 / ' / ';
+        }
+        
+        function calculate()
+        {
+            let total = parseInt(document.getElementById('display').value) + input1;
+            document.getElementById('display').value = total;
+            document.getElementById('input1').innerHTML = "";
+        }
+        function clearform()
+        {
+            input1 = 0;
+            document.getElementById('display').value = "0";
+            document.getElementById('input1').innerHTML=" ";
+        }
+        function cancelone()
+        {var num = document.getElementById('display').value;
+        document.getElementById('display').value = num.slice(0,num.length-1);
+        }
+    </script>
+    
+</body>
+</html>
