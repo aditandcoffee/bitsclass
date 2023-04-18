@@ -1,0 +1,31 @@
+.container {
+    text-align: center;
+    margin-top: 40px;
+    
+}
+
+input {
+    width: 50px;
+}
+button {
+    margin: 50px;
+}
+.progress-bar {
+    text-align: center;
+    display: block;
+    background-color: aqua;
+    width: 200px;
+    border-radius: 10px;
+    
+}
+
+.progress {
+
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    padding: 2px 0px;
+    width: 40%;
+    display: block;
+    text-align: center;
+}

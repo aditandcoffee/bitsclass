@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <div class="container">
+        <p> Math <input type="text" id="number1"> of 100</p>
+        <p> Science <input type="text" id="number2"> of 100</p>
+        <p> English <input type="text" id="number3"> of 100</p>
+        <button onclick="showresult()">Show Result</button>
+        <h3 > Result : you got <span id="result">50</span></h3>
+        <p class="progress-bar" id="progress-bar">
+            <span class="progress" id="progress">40%</span>
+        </p>
+    </div> 
+    <script>
+        function showresult() 
+        {
+            var num1 = document.getElementById('number1').value;
+            var num2 = document.getElementById('number2').value;
+            var num3 = document.getElementById('number3').value;
+            var total = parseInt(num1) + parseInt(num2) + parseInt(num3);
+            var percent = (total/300)*100;
+            document.getElementById('result').innerHTML = percent + "%";
+            
+            
+            var per = percent;
+           if (parseInt(per))
+           {
+            if (per > 0 && per <= 100)
+            {
+                document.getElementById('progress').innerHTML = per + "%";
+            document.getElementById('progress').style.width = per + '%'
+            } 
+            else
+            {
+                alert('The value must be between 0 and 100');
+            }
+           }
+           else
+           {
+            alert('please input a valid number')
+            
+           }
+        }
+            
+        
+    
+
+    </script>
+        
+</body>
+</html>
