@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Form</title>
+</head>
+<body>
+    <form action="" onsubmit="return validate()">
+        <input type="email" id="email" placeholder="Enter email" required>
+        <input type="password" id="password" placeholder="Enter password"
+        minlength="5" maxlength="15" required>
+        <input type="submit" value="Login">
+    </form>
+    <script>
+        function validate() 
+        {
+            let email = document.getElementById("email").value;
+            let pass = document.getElementById("password").value;
+            if (email == "" || pass == "")
+            {
+                alert('Both field are required');
+                return false;
+            } 
+            if (email.length < 6)
+            {
+                alert('email must be atleast 6 character long');
+                return false;
+            }
+        }
+    </script>
+    
+</body>
+</html>

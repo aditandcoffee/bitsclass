@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+}
+
+.navbar {
+    background-color: blue;
+    padding: 5px;
+}
+.menu {
+    padding: 10px;
+    list-style-type: none;
+    text-align: right;
+    
+}
+.mob {
+      text-align: left;
+      display: block;  
+    }
+
+.menu li {
+    display: inline;
+    padding: 20px;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+.navbar i {
+    display: none;
+}
+
+@media screen and (max-width:480px) {
+    .navbar i {
+        display: block;
+    }
+    .navbar {
+        text-align: right;
+        color: white;
+    }
+    .menu {
+        text-align: left;
+        display: none;
+    }
+    .menu li {
+        display: block;
+    }
+    .mob {
+        display: block;
+    }
+}
