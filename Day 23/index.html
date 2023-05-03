@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+</head>
+<div class="mx-20 border-l-4 border-blue-600 my-5 pl-2 bg-slate-200 inline-block px-2">
+    <h2 class="font-bold text-lg">OUR GALLERY</h2>
+    <p>View our gallery photos at glance</p>
+
+</div>
+<div class="grid grid-cols-3 gap-5 mx-20 mt-10">
+    <a data-fancybox="gallery" data-src="https://lipsum.app/id/2/1600x1200">
+        <img src="https://lipsum.app/id/2/300x150" class="w-full"/>
+    </a>
+    
+    <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1600x1200">
+        <img src="https://lipsum.app/id/3/300x150" class="w-full"/>
+    </a>
+    
+    <a data-fancybox="gallery" data-src="https://lipsum.app/id/4/1600x1200">
+        <img src="https://lipsum.app/id/4/300x150" class="w-full"/>
+    </a>
+    
+</div>
+
+<body>
+    <script>
+        Fancybox.bind('[data-fancybox="gallery"]', {
+  // Your custom options
+});
+
+    </script>
+</body>
+</html>
