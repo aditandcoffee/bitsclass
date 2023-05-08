@@ -6,25 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css animate</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 <body>
-    <nav class="wow animate__animated animate__backInDown flex justify-between items-center lg:px-20 px-5 bg-white shadow pb-2">
+    <nav class="wow animate__animated animate__backInDown flex justify-between items-center lg:px-20 px-5 bg-white dark:bg-slate-600 shadow pb-2 sticky top-0 z-10">
         <img src="https://www.bitmapitsolution.com/images/logo/logo.png" class="h-16 m-2"></img>
 
         <menu>
-            <a class="mx-2 text-indigo-600 hover:text-red-600" href="">Home</a>
-            <a class="mx-2 text-indigo-600 hover:text-red-600" href="">About Us</a>
-            <a class="mx-2 text-indigo-600 hover:text-red-600" href="">Our Services</a>
-            <a class="mx-2 text-indigo-600 hover:text-red-600" href="">Contact Us</a>
+            <a class="mx-2 text-indigo-600 dark:text-white  hover:text-red-600" href="">Home</a>
+            <a class="mx-2 text-indigo-600 dark:text-white  hover:text-red-600" href="">About Us</a>
+            <a class="mx-2 text-indigo-600  dark:text-white hover:text-red-600" href="">Our Services</a>
+            <a class="mx-2 text-indigo-600 dark:text-white  hover:text-red-600" href="">Contact Us</a>
         </menu>
-<!-- Hero section -->
+        
         <button class="bg-indigo-700 p-2 text-white rounded-xl ">Get IT Support</button>
+        <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+        </button>
     </nav>
+    <!-- Hero section -->
     
         <div class="bg-indigo-800 grid lg:grid-cols-2 gap-3 items-center pb-44">
             <div class="px-20">
@@ -40,10 +59,12 @@
         </div>
     <!-- wave png -->
     <div>
-        <img src="https://www.bitmapitsolution.com/images/home_bottom_shape.png" class="w-full h-56 -mt-52 " >
+        <img src="https://www.bitmapitsolution.com/images/home_bottom_shape.png" class="dark:hidden w-full h-56 -mt-52 " >
+        <img src="./home_bottom_shape_dark.png" class="hidden dark:block w-full h-56 -mt-52 " >
+
     </div>
     <!-- about company section -->
-    <div class="grid lg:grid-cols-2 gap-3">
+    <div class="grid lg:grid-cols-2 gap-3 dark:bg-slate-700 dark:text-white">
         <div class="my-10 mx-20">
             <p class="text-blue-600">ABOUT OUR COMPANY</p>
             <p class="text-3xl  font-bold text-blue-600 my-5">Digitalizing your business is our passion.</p>
@@ -55,13 +76,13 @@
         </div>
     </div>
     <!-- Home assignment services -->
-    <div>
-        <div class="text-center my-20">
+    <div class="dark:bg-slate-600 dark:text-white">
+        <div class="text-center my-30 dark:bg-slate-600">
             <p class="font-bold text-4xl py-2 text-indigo-800">Services</p>
             <p class="text-indigo-600">We provide the following Services as per the need of the clients.</p>
         </div>
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 mx-20 gap-5">
-            <div class="shadow px-5 py-5 flex">
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 mx-20 gap-5 dark:bg-slate-600">
+            <div class="shadow px-5 py-5 flex dark:bg-slate-700">
                 <div>
                     <img src="https://www.bitmapitsolution.com/images/html.png" class="w-32 my-2">
                 </div>
@@ -71,7 +92,7 @@
                 </div>
             </div>
 
-            <div class="shadow px-5 py-5 flex">
+            <div class="shadow px-5 py-5 flex dark:bg-slate-700">
                 <div>
                     <img src="https://www.bitmapitsolution.com/images/html.png" class="w-32 my-2">
                 </div>
@@ -81,7 +102,7 @@
                 </div>
             </div>
 
-            <div class="shadow px-5 py-5 flex">
+            <div class="shadow px-5 py-5 flex dark:bg-slate-700">
                 <div>
                     <img src="https://www.bitmapitsolution.com/images/html.png" class="w-32 my-2">
                 </div>
@@ -91,7 +112,7 @@
                 </div>
             </div>
 
-            <div class="shadow px-5 py-5 flex">
+            <div class="shadow px-5 py-5 flex dark:bg-slate-700">
                 <div>
                     <img src="https://www.bitmapitsolution.com/images/html.png" class="w-32 my-2">
                 </div>
@@ -101,7 +122,7 @@
                 </div>
             </div>
 
-            <div class="shadow px-5 py-5 flex">
+            <div class="shadow px-5 py-5 flex dark:bg-slate-700">
                 <div>
                     <img src="https://www.bitmapitsolution.com/images/html.png" class="w-32 my-2">
                 </div>
@@ -111,7 +132,7 @@
                 </div>
             </div>
 
-            <div class="shadow px-5 py-5 flex">
+            <div class="shadow px-5 py-5 flex dark:bg-slate-700">
                 <div>
                     <img src="https://www.bitmapitsolution.com/images/html.png" class="w-32 my-2">
                 </div>
@@ -124,25 +145,25 @@
     </div>
     <!-- fixed image background -->
     <div class="h-96 bg-fixed relative bg-cover " style="background-image: url('https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg');">
-        <div class="absolute inset-0 bg-orange-900 bg-opacity-50 flex lg:flex-row flex-col h-full w-full items-center justify-center text-white">
+        <div class="numbers absolute inset-0 bg-orange-900 bg-opacity-50 flex lg:flex-row flex-col h-full w-full items-center justify-center text-white">
             <div class="mx-10">
-                <span class="text-5xl font-bold" id="totalclients">53</span>
+                <span class="text-5xl font-bold count" id="totalclients">53</span>
                 <span class="float-right">+</span>
                 <p>Clients</p>
             </div>
             <div class="mx-10">
-                <span class="text-5xl font-bold" id="hours">1200</span>
+                <span class="text-5xl font-bold count" id="hours">1200</span>
                 <span class="float-right">+</span>
                 <p class="mx-2">Hours of work</p>
             </div>
             <div class="mx-10">
-                <span class="text-5xl font-bold" id="project">80</span>
+                <span class="text-5xl font-bold count" id="project">80</span>
                 <span class="float-right">+</span>
                 <p>Projects</p>
             </div>
             <div class="mx-10">
                 <div class="mx-5">
-                    <span class="text-5xl font-bold" id="hard">10</span>
+                    <span class="text-5xl font-bold count" id="hard">10</span>
                 <span class="float-right">+</span>
                 </div>
                 <div>
@@ -154,8 +175,8 @@
 
     </div>
 <!-- service again for demo testing -->
-<div>
-    <div class="text-center my-20">
+<div class=" dark:bg-slate-600 dark:text-white">
+    <div class="text-center my-30">
         <p class="font-bold text-4xl py-2 text-indigo-800">Services</p>
         <p class="text-indigo-600">We provide the following Services as per the need of the clients.</p>
     </div>
@@ -223,7 +244,7 @@
 </div>
 
 <!-- slider testimonials plugin -->
-<div class="bg-indigo-800 text-white text-center lg:pt-24 md:p-12 p-5">
+<div class="bg-indigo-800 text-white text-center pt-24 p-12 p-5">
     <h2 class="text-3xl ">Testimonials</h2>
     <p class="my-2">What our client say</p>
     <div class="my-5 swiper mySwiper">
@@ -263,7 +284,7 @@
 
 <!-- Home assignmnet - brands slider with js plugin -->
 
-    <div class="bg-slate-200 text-indigo-900 p-24 text-center" id="clients">
+    <div class="bg-slate-200 text-indigo-900 p-24 text-center dark:bg-slate-700 dark:text-white" id="clients">
         <h2 class="text-3xl">Our Clients</h2>
         <p class="my-2">Here are Our Clients
         </p>
@@ -362,57 +383,57 @@
 
 
 <script>
-    let last = (document.getElementById('totalclients').innerHTML);
-    let x = setInterval(increase,50);
-    let count = 0;
-    function increase()
-    {
-        if (count >= last)
-        {
-            clearInterval(x);
-        }
-        document.getElementById('totalclients').innerHTML = count;
-        count++;
-    }
+    // let last = (document.getElementById('totalclients').innerHTML);
+    // let x = setInterval(increase,50);
+    // let count = 0;
+    // function increase()
+    // {
+    //     if (count >= last)
+    //     {
+    //         clearInterval(x);
+    //     }
+    //     document.getElementById('totalclients').innerHTML = count;
+    //     count++;
+    // }
 
-    let lasthours = (document.getElementById('hours').innerHTML);
-    let xhours = setInterval(increasehours,1);
-    let counthours=500;
-    function increasehours()
-    {
-        if(counthours >= lasthours)
-        {
-            clearInterval(xhours);
-        }
-        document.getElementById('hours').innerHTML = counthours;
-        counthours++;
-    }
+    // let lasthours = (document.getElementById('hours').innerHTML);
+    // let xhours = setInterval(increasehours,1);
+    // let counthours=500;
+    // function increasehours()
+    // {
+    //     if(counthours >= lasthours)
+    //     {
+    //         clearInterval(xhours);
+    //     }
+    //     document.getElementById('hours').innerHTML = counthours;
+    //     counthours++;
+    // }
 
-    let lastproject = (document.getElementById('project').innerHTML);
-    let xproject = setInterval(increaseproject,50);
-    let countproject=0;
-    function increaseproject()
-    {
-        if(countproject >= lastproject)
-        {
-            clearInterval(xproject);
-        }
-        document.getElementById('project').innerHTML = countproject;
-        countproject++;
-    }
-    let lasthard = (document.getElementById('hard').innerHTML);
-    let xhard = setInterval(increasehard,100);
-    let counthard=0;
-    function increasehard()
-    {
-        if(counthard >= lasthard)
-        {
-            clearInterval(xhard);
-        }
-        document.getElementById('hard').innerHTML = counthard;
-        counthard++;
-    }
-
+    // let lastproject = (document.getElementById('project').innerHTML);
+    // let xproject = setInterval(increaseproject,50);
+    // let countproject=0;
+    // function increaseproject()
+    // {
+    //     if(countproject >= lastproject)
+    //     {
+    //         clearInterval(xproject);
+    //     }
+    //     document.getElementById('project').innerHTML = countproject;
+    //     countproject++;
+    // }
+    // let lasthard = (document.getElementById('hard').innerHTML);
+    // let xhard = setInterval(increasehard,100);
+    // let counthard=0;
+    // function increasehard()
+    // {
+    //     if(counthard >= lasthard)
+    //     {
+    //         clearInterval(xhard);
+    //     }
+    //     document.getElementById('hard').innerHTML = counthard;
+    //     counthard++;
+    // }
+   
     let swiper = new Swiper(".mySwiper", {
       spaceBetween: 30,
       centeredSlides: true,
@@ -469,6 +490,74 @@
 <script>
     new WOW().init();
     </script>
+
+    <!-- This is for jquery auto count timer -->
+    
+    <script>
+        let section = $('.numbers').offset();
+        let hasEntered = false;
+        window.addEventListener('scroll',(e) => {
+            let shouldAnimate = (window.scrollY + window.innerHeight) >= section.top;
+            if (shouldAnimate && !hasEntered) {
+                hasEntered = true;
+
+        $('.count').each(function() {
+            $(this).prop('counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 2000,
+                easing: 'swing',
+                step: function(now){
+                $(this).text(Math.ceil(now));
+            }
+            });
+        });
+                    }
+                });
+    </script>
+
+<script>
+    var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+// Change the icons inside the button based on previous settings
+if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    themeToggleLightIcon.classList.remove('hidden');
+} else {
+    themeToggleDarkIcon.classList.remove('hidden');
+}
+
+var themeToggleBtn = document.getElementById('theme-toggle');
+
+themeToggleBtn.addEventListener('click', function() {
+
+    // toggle icons inside button
+    themeToggleDarkIcon.classList.toggle('hidden');
+    themeToggleLightIcon.classList.toggle('hidden');
+
+    // if set via local storage previously
+    if (localStorage.getItem('color-theme')) {
+        if (localStorage.getItem('color-theme') === 'light') {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+        }
+
+    // if NOT set via local storage previously
+    } else {
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+        }
+    }
+    
+});
+</script>
 
 </body>
 </html>
