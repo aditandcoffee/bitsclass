@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="flex">
+        <div class="bg-slate-500 h-screen w-56">
+            <div class="rounded bg-slate-200 mx-10 mt-10 shadow-lg">
+                <img src="https://www.bitmapitsolution.com/images/logo/logo.png">
+            </div>
+            <menu class="mt-20 text-white">
+                <li class="border-l-4 py-3 bg-slate-600 border-blue-700 mx-5 my-5 text-center rounded hover:shadow-md cursor-pointer  hover:bg-blue-700 hover:scale-105 transition-colors ease-in delay-100 ">Dashboard</li>
+                <li class="border-l-4 py-3 bg-slate-600 border-blue-700 mx-5 my-5 text-center rounded hover:shadow-md cursor-pointer hover:bg-blue-700 hover:scale-105 ">Account</li>
+                <li class="border-l-4 py-3 bg-slate-600 border-blue-700 mx-5 my-5 text-center rounded hover:shadow-md cursor-pointer hover:bg-blue-700 hover:scale-105 ">Categories</li>
+                <li class="border-l-4 py-3 bg-slate-600 border-blue-700 mx-5 my-5 text-center rounded hover:shadow-md cursor-pointer hover:bg-blue-700 hover:scale-105">Add/Delete</li>
+                <a href="index.html" target="_blank">
+                    <li class="border-l-4 py-3 bg-slate-600 border-red-700 mx-5 my-48 text-center rounded hover:shadow-md hover:bg-red-700 hover:scale-105 ">Logout</li>
+                </a>
+            </menu>
+        </div>
+        <div class="flex-1">
+            <div class="text-2xl font-bold px-5 py-10">
+                <div class="flex justify-around">
+                    <span>WELCOME TO DASHBOARD,</span>
+                    <span id="mytime"></span>
+                    <span class="flex items-center">Account <i class="ri-account-box-line font-normal pl-3"></i></span>
+                </div>
+                <hr>
+            </div>
+            <div class="mt-5 grid grid-cols-3 gap-5 px-10 mb-10 ">
+                <div class="bg-green-600 text-white rounded text-center flex justify-around shadow-lg">
+                    <p class=" font-bold text-2xl py-3">Total categories</p>
+                    <p class=" font-bold text-2xl py-3">50</p>
+                </div>
+                <div class="bg-red-600 text-white rounded text-center flex justify-around  shadow-lg">
+                    <p class=" font-bold text-2xl py-3">Total categories</p>
+                    <p class=" font-bold text-2xl py-3">50</p>
+                </div>
+                <div class="bg-blue-600 text-white rounded text-center flex justify-around shadow shadow-lg">
+                    <p class=" font-bold text-2xl py-3">Total categories</p>
+                    <p class=" font-bold text-2xl py-3">50</p>
+                </div>
+            </div>
+
+            <div class="mt-10 mx-16">
+                <!-- databox table -->
+            <table id="myTable" class="display ">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Picture</th>
+                        <th>Office</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ram</td>
+                        <td>Shyam</td>
+                        <td>Hari</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2 Data 1</td>
+                        <td>Row 2 Data 2</td>
+                        <td>Row 3 Data 3</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2 Data 1</td>
+                        <td>Row 2 Data 2</td>
+                        <td>Row 3 Data 3</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2 Data 1</td>
+                        <td>Row 2 Data 2</td>
+                        <td>Row 3 Data 3</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        
+
+    </div>
+    <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script>
+        let table = new DataTable('#myTable');
+    </script>
+    <script>
+        runtime();
+        function runtime()
+        {
+            var dt = new Date();
+            setInterval(runtime,1000);
+            var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+            $('#mytime').text(time);
+        }
+    </script>
+</body>
+</html>
